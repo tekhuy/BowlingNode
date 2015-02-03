@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tekhuy/BowlingNode",
   "devDependencies": {
+    "grunt": "^0.4.5",
     "jasmine-node": "^1.14.5"
   }
 }
