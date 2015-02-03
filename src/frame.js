@@ -1,6 +1,6 @@
 function Frame() {
   this.runningScore = 0;
-};
+}
 
 Frame.prototype.score = function() {
   return this.runningScore;

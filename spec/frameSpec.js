@@ -15,7 +15,7 @@ describe('Frame', function() {
   it('Scores 0 on a gutter game', function() {
     for(var i = 0; i < 20; i++){
       game.roll(0);
-    };
+    }
     expect(frame.score()).toEqual(0);
   });
 
