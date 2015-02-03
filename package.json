@@ -1,0 +1,22 @@
+{
+  "name": "BowlingNode",
+  "version": "0.0.0",
+  "description": "\"Bowling challenge using Node\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tekhuy/BowlingNode.git"
+  },
+  "author": "tekhuy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tekhuy/BowlingNode/issues"
+  },
+  "homepage": "https://github.com/tekhuy/BowlingNode",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
