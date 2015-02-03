@@ -1,10 +1,13 @@
+var Frame = require('../src/frame');
 var Game = require('../src/game');
 
-describe('Gutter game', function() {
+describe('Frame', function() {
   
+  var frame;
   var game;
 
   beforeEach(function() {
+    frame = new Frame();
     game = new Game();
   });
   
@@ -13,12 +16,12 @@ describe('Gutter game', function() {
     for(var i = 0; i < 20; i++){
       game.roll(0);
     };
-    expect(game.score()).toEqual(0);
+    expect(frame.score()).toEqual(0);
   });
 
   it('can play a frame', function() {
-    game.playFrame(3, 4);
-    expect(game.score()).toEqual(7);
+    frame.playFrame(3, 4);
+    expect(frame.score()).toEqual(7);
   });
 
 });
