@@ -18,7 +18,7 @@ Game.prototype.playFrame = function(roll1, roll2) {
     this.firstFrame = new Frame();
   }
   this.firstFrame.playFrame(roll1, roll2);
-  this.runningScore = this.firstFrame.score();
+  this.runningScore += this.firstFrame.score();
 };
 
 module.exports = Game;
