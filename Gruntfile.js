@@ -6,11 +6,17 @@ module.exports = function(grunt) {
     },
     jshint: {
       all: ['Gruntfile.js', 'spec/**/*.js', 'src/**/*.js']
+    },
+    watch: {
+      all: ['<%= jshint.files %>'],
+      tasks: ['jshint']
     }
   });
 
   grunt.loadNpmTasks('grunt-jasmine-node');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.registerTask('default', ['jshint', 'jasmine_node']);
-
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('default', ['jshint', 'jasmine_node', 'watch']);
+  grunt.registerTask('hint', ['jshint']);
+  // grunt.registerTask('look', ['watch']);
 };
