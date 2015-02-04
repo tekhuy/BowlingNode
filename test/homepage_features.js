@@ -1,3 +1,5 @@
+require('../server');
+
 describe('homepage', function() {
 
   before(function(){
