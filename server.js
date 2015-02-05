@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/reflect.json', function(request, response) {
-  response.json(request.query);
+  response.render('reflect', {query: request.query});
 });
 
 server.listen(9999, function() {
