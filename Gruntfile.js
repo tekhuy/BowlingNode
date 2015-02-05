@@ -13,17 +13,17 @@ module.exports = function(grunt) {
       options: {
         // Override defaults here
       },
-      dev: {
-        options: {
-          script: './server.js'
-        }
-      },
-      prod: {
-        options: {
-          script: './server.js',
-          node_env: 'production'
-        }
-      },
+      // dev: {
+      //   options: {
+      //     script: './server.js'
+      //   }
+      // },
+      // prod: {
+      //   options: {
+      //     script: './server.js',
+      //     node_env: 'production'
+      //   }
+      // },
       test: {
         options: {
           script: './server.js'
