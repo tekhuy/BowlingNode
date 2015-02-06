@@ -5,19 +5,18 @@ var server = http.createServer(app);
 var port = 9999;
 
 app.set('view engine', 'ejs');
-app.use('/stylesheets', express.static(__dirname + '/public/stylesheets'));
-app.use('/javascript', express.static(__dirname + '/public/javascript'));
+app.set(express.static(__dirname + '/public'));
 
-app.get('/', function(request, response){
-  response.render('index');
+app.get('/', function(request, response) {
+  response.render('index', request.query);
 });
 
-app.get('/users/:user', function(request, response){
-  response.header('Access-Control-Allow-Origin','*');
-  response.header('Content-Type','application/json; charset=utf-8');
-  response.render(request.params.user);
+app.get('/reflect.json', function(request, response) {
+  response.render('reflect', {query: request.query});
 });
 
-server.listen(port, function(){
-  console.log('server listening on port: ' + port);
+server.listen(9999, function() {
+  console.log("Server listening on port " + port);
 });
+
+module.exports = server;
